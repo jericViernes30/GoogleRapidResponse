@@ -14,6 +14,7 @@ $current_time = date('g : i : s A');
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <link href="../src/output.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
     <title>Admin Home</title>
     <script>
     function updateClock() {
@@ -79,6 +80,9 @@ $current_time = date('g : i : s A');
         </div>
         <p class="text-center mb-5">As of <?php echo $current_date; ?> <span id="clock"></span></p>
         <div id="table" class="w-2/3 block mx-auto">
+
+        </div>
+        <div id="result" class="w-full">
 
         </div>
     </div>

@@ -3,7 +3,6 @@ include("db.php");
 $ref = "distress";
 $fetch = $database->getReference($ref)->getValue();
 foreach($fetch as $key => $row){
-    // var_dump($row);
     $name = $row['firstName'] . ' ' . $row['lastName'];
 ?>
     <div class="flex mb-3 border border-[#bebebe] bg-white shadow-md rounded-md p-2">
@@ -22,35 +21,37 @@ foreach($fetch as $key => $row){
             </div>
         </div>
         <div class="w-[15%] flex items-center text-sm">
-            <button id="btn" name="view" class="block mx-auto px-6 py-1 bg-google-blue text-white rounded-sm">
+            <!-- Pass the row object as data when the button is clicked -->
+            <button class="block mx-auto px-6 py-1 bg-google-blue text-white rounded-sm view-btn" data-row='<?php echo json_encode($row); ?>'>
                 View
             </button>
         </div>
     </div>
-    <script>
-        $(document).ready(function(){
-            // Define the click event for the button
-            $("#fetchDataBtn").click(function(){
-                // Additional data to be sent to the server
-                var name = "John Doe";
-
-                // Make an AJAX request when the button is clicked
-                $.ajax({
-                    url: 'modal.php', // URL of the PHP script to handle the request
-                    type: 'GET', // HTTP method
-                    data: { name: name }, // Additional data to be sent to the server
-                    success: function(html) {
-                        // Handle successful response
-                        $("#result").html(html); // Display response in the result div
-                    },
-                    error: function(xhr, status, error) {
-                        // Handle errors
-                        console.error('Error fetching data:', error);
-                    }
-                });
-            });
-        });
-    </script>
 <?php
 }
 ?>
+<!-- JavaScript to handle button click event -->
+<script>
+    $(document).ready(function(){
+        // Define the click event for the button
+        $(".view-btn").click(function(){
+            // Get the row data from the button's data attribute
+            var rowData = $(this).data('row');
+
+            // Make an AJAX request when the button is clicked
+            $.ajax({
+                url: '../modal.php', // URL of the PHP script to handle the request
+                type: 'GET', // HTTP method
+                data: { rowData: rowData }, // Pass the row data as data to the server
+                success: function(html) {
+                    // Handle successful response
+                    $("#result").html(html); // Display response in the result div
+                },
+                error: function(xhr, status, error) {
+                    // Handle errors
+                    console.error('Error fetching data:', error);
+                }
+            });
+        });
+    });
+</script>
