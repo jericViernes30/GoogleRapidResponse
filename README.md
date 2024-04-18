@@ -9,7 +9,14 @@ Our goal is to offer a user-friendly interface that enables quick requests for h
 
 
 ## Key Features
+1. __One-Tap Emergency Request:__ The centerpiece of the app is a prominently displayed big red button that, when tapped, immediately sends an emergency signal to the nearest local barangay medical support team.
+2. __Location-Based Assistance:__ Rapid Response utilizes GPS technology to pinpoint the user's location accurately, ensuring that the nearest medical assistance team is dispatched promptly.
 
+3. __Customizable Profiles:__ Users can create personalized profiles for each household member, including medical history, allergies, and other essential information. This aids responders in providing tailored care.
+
+4. __Offline Capability:__ In areas with poor connectivity, Rapid Response stores essential information locally, allowing users to send emergency requests even without an active internet connection.
+
+5. __Emergency Contacts Integration:__ Users can integrate their emergency contacts within the app, enabling automatic notifications to family members or guardians when an emergency request is made.
 
 ## Discussion
 #### Problem Encountered
