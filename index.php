@@ -27,12 +27,12 @@
                     <p class="text-sm text-gray-800">Use your Rapid Response Account</p>
                 </div>
                 <div class="w-1/2 relative">
-                    <form action="" class="w-full">
+                    <form action="login.php" method="POST" class="w-full">
                         <input type="text" name="barangay" class="w-full rounded-md shadow-sm outline-none border border-gray-700 placeholder-gray-500 p-4 mb-6" placeholder="Barangay">
                         <input type="password" name="password" class="w-full rounded-md shadow-sm outline-none border border-gray-700 placeholder-gray-500 p-4" placeholder="Password">
                         <div class="w-full flex items-center justify-end gap-4 mt-10">
                             <a href="signup.php" class="text-blue-500 text-sm">Create account</a>
-                            <button class="py-2 px-8 bg-google-blue text-sm text-white rounded-full">Next</button>
+                            <button name="login" class="py-2 px-8 bg-google-blue text-sm text-white rounded-full">Next</button>
                         </div>
                     </form>
                 </div>
