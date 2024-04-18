@@ -4,8 +4,13 @@
 
 __Rapid Response__ is a mobile application designed to provide swift access to emergency medical assistance. 
 
+## Problem Statement
+The problem stemmed from witnessing a motorcycle accident where bystanders were more focused on recording the incident on their phones rather than offering immediate assistance. This highlighted a concerning trend where individuals may have access to communication tools but lack the awareness or capability to utilize them effectively in emergencies. Moreover, households with internet connections may face barriers to making calls due to insufficient load credits.
+
+## Objectives
 Our goal is to offer a user-friendly interface that enables quick requests for help in critical situations, especially for households with children under the age of 7. By simplifying the process to a single action—pressing a big red button — Rapid Response empowers users to seek urgent aid from their nearest local barangay with ease, eliminating the complexities of dialing emergency hotlines.
 
+## Project Overview
 
 
 ## Key Features
